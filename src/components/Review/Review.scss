@@ -1,0 +1,108 @@
+.review {
+  .review-top {
+    text-align: center;
+    h1 {
+      font-size: 30px;
+      font-weight: 500;
+      position: relative;
+      display: inline-block;
+
+      &::after {
+        content: "";
+        position: absolute;
+        background: #3bad4b;
+        height: 6px;
+        border-radius: 5px;
+        width: 200px;
+        display: block;
+        left: 50%;
+        transform: translateX(-50%);
+        bottom: -12px;
+      }
+    }
+    p {
+      width: 60%;
+      margin: 0 auto;
+      margin-bottom: 40px;
+      margin-top: 20px;
+      font-size: 18px;
+      color: #585858;
+    }
+  }
+
+  .review-cards {
+    background: #f8f9fa;
+    max-width: 1300px;
+    margin: 0 auto;
+    padding: 30px 50px;
+    .review-card {
+      border: 1px solid #bfbfbf;
+      width: 250px;
+      padding: 20px;
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+
+      .review-card-top {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+
+        .userIcon {
+          color: #fff;
+          background: #3bad4b;
+          border-radius: 50%;
+          font-size: 30px;
+          padding: 5px;
+        }
+        p {
+          &:first-child {
+            font-size: 18px;
+          }
+          &:last-child {
+            color: #3bad4b;
+          }
+        }
+      }
+
+      .review-stars {
+        margin-top: 10px;
+        color: #ffaa01;
+        display: flex;
+        gap: 2px;
+        font-size: 14px;
+      }
+
+      .review-desc {
+        p {
+          color: #585858;
+          font-weight: 300;
+          line-height: 1.5;
+
+          display: -webkit-box;
+          -webkit-line-clamp: 4;
+          -webkit-box-orient: vertical;
+          overflow: hidden;
+          transition: all 0.3s ease-in-out;
+        }
+
+        &.expanded {
+          p {
+            display: block;
+          }
+        }
+
+        .read-more-btn {
+          background-color: #3bad4b;
+          color: white;
+          border: none;
+          padding: 8px 12px;
+          margin-top: 10px;
+          cursor: pointer;
+          border-radius: 5px;
+          font-size: 14px;
+        }
+      }
+    }
+  }
+}
