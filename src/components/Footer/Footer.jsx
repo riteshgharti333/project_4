@@ -42,7 +42,7 @@ const Footer = () => {
 
       <div className="footer-bottom">
         <p>
-          TK Production Films all rights reserved Devloped and Design by&nbsp;
+        Kilinya Construction all rights reserved Devloped and Design by&nbsp;
           <a
             href="https://www.Wingstarnarketing.com"
             target="_blank"
