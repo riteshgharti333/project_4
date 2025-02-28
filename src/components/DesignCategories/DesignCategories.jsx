@@ -24,13 +24,14 @@ const DesignCategories = () => {
           speed={1000}
           loop={true}
           autoplay={{
-            delay: 2500, 
-            disableOnInteraction: false, 
+            delay: 2500,
+            disableOnInteraction: false,
           }}
           grabCursor={true}
           breakpoints={{
-            640: { slidesPerView: 1 },
-            768: { slidesPerView: 2 },
+            0: { slidesPerView: 1 },
+            480: { slidesPerView: 2 },
+            768: { slidesPerView: 3 },
             1024: { slidesPerView: 4 },
           }}
         >

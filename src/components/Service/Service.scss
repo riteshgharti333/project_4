@@ -1,6 +1,9 @@
+@use "../../styles/responsive.scss" as *;
+
 .service {
   max-width: 1300px;
   margin: 0 auto;
+  padding: 0px 10px;
   .service-top {
     text-align: center;
     h1 {
@@ -8,6 +11,10 @@
       font-weight: 500;
       position: relative;
       display: inline-block;
+
+      @include sm{
+        font-size: 25px;
+      }
 
       &::after {
         content: "";
@@ -29,13 +36,33 @@
       margin-top: 20px;
       font-size: 18px;
       color: #585858;
+
+      @include lg{
+        width: 95%;
+      }
     }
   }
 
   .service-cards {
-    display: flex;
     justify-content: space-between;
+    display: grid;
+    grid-template-columns: repeat(4,1fr);
     gap: 10px;
+
+    @include lg{
+    grid-template-columns: repeat(3,1fr);
+
+    }
+
+    @include md{
+      grid-template-columns: repeat(2,1fr);
+  
+      }
+
+      @include sm{
+        grid-template-columns: repeat(1,1fr);
+    
+        }
 
     .service-card {
       background: #c7c1e1;

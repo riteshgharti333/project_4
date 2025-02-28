@@ -1,3 +1,5 @@
+@use "../../styles/responsive.scss" as *;
+
 .projects {
   .projects-top {
     text-align: center;
@@ -6,6 +8,10 @@
       font-weight: 500;
       position: relative;
       display: inline-block;
+
+      @include sm {
+        font-size: 25px;
+      }
 
       &::after {
         content: "";
@@ -27,6 +33,14 @@
       margin-top: 20px;
       font-size: 18px;
       color: #585858;
+
+      @include lg {
+        width: 95%;
+      }
+
+      @include md {
+        margin-bottom: 10px;
+      }
     }
   }
 
@@ -40,9 +54,11 @@
 
   .projects-cards {
     background: #f8f9fa;
-    max-width: 1200px;
-    margin: 0 auto;
     padding: 30px 50px;
+
+    @include md {
+      padding: 30px 10px;
+    }
     .projects-card {
       border: 1px solid #bfbfbf;
       display: flex;

@@ -2,8 +2,10 @@ import { Link } from "react-router-dom";
 import "./Navbar.scss";
 
 import { IoMdArrowDropdown } from "react-icons/io";
-import { MdOutlineLogin } from "react-icons/md";
 import { useEffect, useRef, useState } from "react";
+
+import logo from "../../assets/images/logo.png";
+import MobileMenu from "../MobileMenu/MobileMenu";
 
 const Navbar = () => {
   const [openDropdown, setOpenDropdown] = useState(null);
@@ -30,7 +32,10 @@ const Navbar = () => {
   return (
     <div className="navbar">
       <div className="navbar-left">
-        <h1>LOGO</h1>
+        <Link to={"/"}>
+        <img src={logo} alt="" />
+
+        </Link>
       </div>
 
       <div className="navbar-center">
@@ -302,12 +307,14 @@ const Navbar = () => {
       </div>
 
       <div className="navbar-right">
-        <button>Consult Online Now</button>
-        <button>News</button>
-        <button>
-          {" "}
-          <MdOutlineLogin className="login-icon" /> Login
-        </button>
+        <div className="navbar-right-btns">
+          <button>Consult Online Now</button>
+          <button>News</button>
+        </div>
+
+        <div className="mobile-menu">
+          <MobileMenu />
+        </div>
       </div>
     </div>
   );

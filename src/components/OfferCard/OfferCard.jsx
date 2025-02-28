@@ -18,8 +18,9 @@ const OfferCard = () => {
         freeMode={true}
         grabCursor={true}
         breakpoints={{
-          640: { slidesPerView: 1 },
-          768: { slidesPerView: 2 },
+          0: { slidesPerView: 1 },
+          480: {slidesPerView: 2},
+          768: { slidesPerView: 3 },
           1024: { slidesPerView: 3 },
         }}
       >

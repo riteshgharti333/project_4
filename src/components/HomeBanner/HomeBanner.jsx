@@ -25,7 +25,9 @@ const HomeBanner = () => {
             {Array.from({ length: 5 }).map((_, index) => (
               <div
                 key={index}
-                className={`homeBanner-desc-item-card ${selectedCard === index ? "active" : ""}`}
+                className={`homeBanner-desc-item-card ${
+                  selectedCard === index ? "active" : ""
+                }`}
                 onClick={() => handleCardClick(index)}
               >
                 <img src={svg_icon} alt="" />

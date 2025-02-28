@@ -1,10 +1,24 @@
+@use "../../styles/responsive.scss" as *;
+
 .service2 {
   max-width: 1200px;
   margin: 0 auto;
+  padding: 0px 10px;
   .service2-top {
     display: flex;
     justify-content: space-between;
     gap: 30%;
+    @include xl {
+      gap: 20%;
+    }
+    @include lg {
+      gap: 10%;
+    }
+    @include md {
+      flex-direction: column;
+      gap: 10px;
+      align-items: center;
+    }
     .service2-top-left {
       h2 {
         font-size: 25px;
@@ -29,6 +43,10 @@
       height: fit-content;
       white-space: nowrap;
 
+      @include md {
+        width: fit-content;
+      }
+
       &:hover {
         transform: translateY(-2px);
       }
@@ -37,7 +55,7 @@
 
   .service2-cards {
     display: grid;
-    grid-template-columns: repeat(5, 1fr);
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
     gap: 30px;
     margin-top: 20px;
 
@@ -55,9 +73,8 @@
       &:hover {
         transform: scale(1.03);
 
-        p{
-        border-bottom: 1px solid #000;
-
+        p {
+          border-bottom: 1px solid #000;
         }
       }
 
@@ -65,9 +82,9 @@
         width: 60px;
       }
 
-      p{
+      p {
         font-weight: bold1;
-        transition: all .3s ease-in-out;
+        transition: all 0.3s ease-in-out;
         border-bottom: 1px solid transparent;
       }
     }

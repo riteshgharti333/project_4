@@ -1,5 +1,5 @@
 import "./Design.scss";
-import { useState, useEffect, useRef } from "react";
+import { useState, useRef } from "react";
 import { trends } from "../../assets/data";
 
 import { Swiper, SwiperSlide } from "swiper/react";
@@ -46,8 +46,9 @@ const Design = () => {
               spaceBetween={10}
               slidesPerView={4}
               breakpoints={{
-                640: { slidesPerView: 1 },
-                768: { slidesPerView: 2 },
+                0: { slidesPerView: 1 },
+                480: { slidesPerView: 2 },
+                768: { slidesPerView: 3 },
                 1024: { slidesPerView: 4 },
               }}
             >

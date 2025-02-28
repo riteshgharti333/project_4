@@ -1,13 +1,18 @@
+@use "../../styles/responsive.scss" as *;
+
 .designCategories {
   text-align: center;
-  max-width: 1300px;
-  margin: auto;
+  padding: 0px 10px;
 
   h1 {
     font-size: 30px;
     font-weight: 500;
     position: relative;
     display: inline-block;
+
+    @include sm{
+      font-size: 25px;
+    }
 
     &::after {
       content: "";
@@ -29,6 +34,10 @@
     margin-top: 20px;
     font-size: 18px;
     color: #585858;
+
+    @include lg {
+      width: 95%;
+    }
   }
 
   .swiper {

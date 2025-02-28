@@ -12,11 +12,12 @@ const Work = () => {
 
       <div className="work-container">
         <div className="work-left">
-          <img src={work_img} alt="" />
+          <img src={work_img} alt="" className="work-img" />
           <div className="work-right-bottom">
             <div className="work-right-bottom-item">
               <h3>
-                <img src={check_icon} alt="" /> Plave Your Order
+                <img src={check_icon} alt="" className="check-img" /> Plave Your
+                Order
               </h3>
               <p>
                 Lorem ipsum dolor sit amet consectetur adipisicing elit.
@@ -27,7 +28,8 @@ const Work = () => {
 
             <div className="work-right-bottom-item">
               <h3>
-                <img src={check_icon} alt="" /> Plave Your Order
+                <img src={check_icon} alt="" className="check-img" /> Plave Your
+                Order
               </h3>
               <p>
                 Lorem ipsum dolor sit amet consectetur adipisicing elit.
@@ -68,8 +70,9 @@ const Work = () => {
 
               <button type="submit">Book Online</button>
               <p>By submitting this form, you agree to the</p>
-              <p><span>privacy policy</span> & <span>
-              terms and conditions </span></p>
+              <p>
+                <span>privacy policy</span> & <span>terms and conditions </span>
+              </p>
             </div>
           </form>
         </div>

@@ -1,7 +1,9 @@
+@use "../../styles/responsive.scss" as *;
+
 .navbar {
   display: flex;
   justify-content: space-between;
-  padding: 30px 20px;
+  padding: 10px 20px;
   align-items: center;
   background: #212529;
   color: #fff;
@@ -9,9 +11,16 @@
   width: 100%;
   z-index: 999;
   .navbar-left {
+    img {
+      width: 80px;
+    }
   }
 
   .navbar-center {
+    @include lg {
+      display: none;
+    }
+
     ul {
       display: flex;
       list-style: none;
@@ -51,26 +60,26 @@
           border-radius: 5px;
           box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
 
-          &.contract{
+          &.contract {
             width: 40%;
             transform: translateX(-85%);
           }
 
-          &.design{
+          &.design {
             width: fit-content;
             left: 45%;
           }
-          &.other{
+          &.other {
             width: fit-content;
             transform: none;
           }
 
-          &.resources{
+          &.resources {
             left: 65%;
             width: fit-content;
           }
 
-          &.more{
+          &.more {
             left: 73%;
             width: fit-content;
           }
@@ -110,41 +119,53 @@
   .navbar-right {
     display: flex;
     gap: 10px;
-    button {
-      padding: 10px;
-      border-radius: 5px;
-      cursor: pointer;
-      background: transparent;
-      color: #fff;
-      transition: all 0.3s ease-in-out;
-      &:first-child {
-        border: 1px solid #008000;
+    align-items: center;
 
-        &:hover {
-          background: #008000;
-        }
+    
+    .navbar-right-btns{
+      margin-right: 10px;
+      display: flex;
+      gap: 10px;
+      @include sm {
+        display: none;
       }
-
-      &:nth-child(2) {
-        border: 1px solid #ffa500;
-
-        &:hover {
-          background: #ffa500;
+      button {
+        padding: 10px;
+        border-radius: 5px;
+        cursor: pointer;
+        background: transparent;
+        color: #fff;
+        transition: all 0.3s ease-in-out;
+        &:first-child {
+          border: 1px solid #008000;
+  
+          &:hover {
+            background: #008000;
+          }
         }
-      }
-
-      &:nth-child(3) {
-        background: #fff;
-        color: #000;
-        border: none;
-        display: flex;
-        align-items: center;
-        gap: 5px;
-
-        .login-icon {
-          font-size: 18px;
+  
+        &:nth-child(2) {
+          border: 1px solid #ffa500;
+  
+          &:hover {
+            background: #ffa500;
+          }
+        }
+  
+        &:nth-child(3) {
+          background: #fff;
+          color: #000;
+          border: none;
+          display: flex;
+          align-items: center;
+          gap: 5px;
+  
+          .login-icon {
+            font-size: 18px;
+          }
         }
       }
     }
+    
   }
 }

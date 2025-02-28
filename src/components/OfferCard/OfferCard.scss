@@ -1,39 +1,43 @@
-.offerCard {
-    width: 100%;
-    max-width: 1400px;
-    margin: 0 auto;
-    .swiper {
-      padding: 20px 0;
-    }
-    .swiper-slide {
-      display: flex;
-      justify-content: center;
-    }
-    .offerCard-item {
-      width: 100%;
-      max-width: 400px;
-      overflow: hidden;
-      img {
-        width: 100%;
-        height: auto;
-      }
-    }
+@use "../../styles/responsive.scss" as *;
 
-    .swiper-button-prev,
-    .swiper-button-next {
-      width: 30px; /* Reduce arrow size */
-      height: 30px;
-      background-color: rgba(0, 0, 0, 0.5); /* Optional: Background color */
-      border-radius: 50%; /* Make it circular */
-      display: flex;
-      justify-content: center;
-      align-items: center;
-    }
-  
-    .swiper-button-prev::after,
-    .swiper-button-next::after {
-      font-size: 16px; /* Reduce arrow icon size */
-      color: white;
+.offerCard {
+  width: 100%;
+  max-width: 1400px;
+  margin: 0 auto;
+
+  padding: 0px 10px;
+
+  .swiper {
+    padding: 20px 0;
+  }
+  .swiper-slide {
+    display: flex;
+    justify-content: center;
+  }
+  .offerCard-item {
+    width: 100%;
+    max-width: 400px;
+    overflow: hidden;
+    img {
+      width: 100%;
+      height: auto;
     }
   }
-  
+
+  .swiper-button-prev,
+  .swiper-button-next {
+    width: 30px; /* Reduce arrow size */
+    height: 30px;
+    background-color: rgba(0, 0, 0, 0.5); /* Optional: Background color */
+    border-radius: 50%; /* Make it circular */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .swiper-button-prev::after,
+  .swiper-button-next::after {
+    font-size: 16px; /* Reduce arrow icon size */
+    color: white;
+  }
+}

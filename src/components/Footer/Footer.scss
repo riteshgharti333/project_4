@@ -1,9 +1,17 @@
+@use "../../styles/responsive.scss" as *;
+
 .footer {
   background: #212529;
   color: #fff;
   padding: 20px 50px;
   .footer-top {
     display: flex;
+
+    @include lg {
+      flex-direction: column;
+      text-align: center;
+      gap: 20px;
+    }
 
     .footer-left {
       flex: 1;
@@ -19,8 +27,9 @@
       align-items: center;
       .footer-logo {
         text-align: center;
-        h1 {
-          font-size: 50px;
+        img {
+          width: 100px;
+          margin-bottom: 10px;
         }
       }
 
@@ -51,6 +60,17 @@
         font-size: 20px;
         gap: 10px;
         text-align: end;
+
+        @include lg {
+          text-align: center;
+          flex-direction: row;
+          justify-content: center;
+          margin-bottom: 20px;
+        }
+
+        @include md {
+          flex-wrap: wrap;
+        }
       }
     }
   }

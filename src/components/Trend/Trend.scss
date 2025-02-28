@@ -1,6 +1,7 @@
+@use "../../styles/responsive.scss" as *;
+
 .trend {
-  max-width: 1300px;
-  margin: auto;
+  padding: 0px 5px;
   .trend-top {
     text-align: center;
     h1 {
@@ -8,6 +9,10 @@
       font-weight: 500;
       position: relative;
       display: inline-block;
+
+      @include sm {
+        font-size: 25px;
+      }
 
       &::after {
         content: "";
@@ -29,6 +34,13 @@
       margin-top: 20px;
       font-size: 18px;
       color: #585858;
+
+      @include lg {
+        width: 80%;
+      }
+      @include sm {
+        width: 95%;
+      }
     }
   }
 
@@ -48,31 +60,41 @@
     }
     .trend-container-section {
       padding: 30px 50px;
-
       background: #def6e5;
+
+      @include lg {
+        padding: 30px;
+      }
+
+      @include md {
+        padding: 10px;
+      }
 
       .trend-section-button {
         display: flex;
         justify-content: center;
         button {
-          background: #61B54E;
+          background: #61b54e;
           border: none;
           padding: 10px 15px;
           font-size: 16px;
           color: #fff;
           cursor: pointer;
           border-radius: 5px;
-          margin-top: 30px;
-          transition: all .3s ease-in-out;
+          margin-top: 20px;
+          transition: all 0.3s ease-in-out;
 
-          &:hover{
+          @include lg {
+            margin-top: 10px;
+          }
+
+          &:hover {
             transform: translateY(-2px);
           }
 
-          &:active{
+          &:active {
             transform: scale(1.08);
           }
-
         }
       }
 

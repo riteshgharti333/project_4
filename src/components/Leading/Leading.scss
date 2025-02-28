@@ -1,5 +1,8 @@
+@use "../../styles/responsive.scss" as *;
+
 .leading {
   position: relative;
+  overflow: hidden;
   .leading-banner {
     img {
       width: 100%;
@@ -15,15 +18,24 @@
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    width: 100%;
+    width: 99%;
     max-width: 1000px;
     align-items: center;
     gap: 20px;
+
+    @include lg {
+      flex-direction: column;
+      text-align: center;
+    }
 
     .leading-desc-cards {
       display: grid;
       grid-template-columns: repeat(2, 1fr);
       gap: 20px;
+
+      @include sm {
+        gap: 10px;
+      }
       .leading-desc-card {
         background: #262523cb;
         display: flex;
@@ -33,17 +45,23 @@
         color: #fff;
         gap: 10px;
 
-        img{
-
+        @include sm {
+          padding: 10px;
+        }
+        img {
         }
 
-        h1{
-            font-size: 35px;
+        h1 {
+          font-size: 35px;
+
+          @include sm {
+            font-size: 25px;
+          }
         }
 
-        p{
-            text-align: center;
-            white-space: nowrap;
+        p {
+          text-align: center;
+          white-space: nowrap;
         }
       }
     }
@@ -53,12 +71,15 @@
     color: #fff;
 
     h1 {
-    font-size: 45px;
-    margin-bottom: 30px;
+      font-size: 45px;
+      margin-bottom: 30px;
 
+      @include sm {
+        font-size: 30px;
+      }
     }
     p {
-        font-size: 25px;
+      font-size: 25px;
     }
   }
 }
