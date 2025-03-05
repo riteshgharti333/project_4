@@ -6,6 +6,16 @@ import trend from "../assets/images/trend.webp";
 
 import project_img from "../assets/images/projects.webp";
 
+import { LuNotebookPen } from "react-icons/lu";
+import { MdOutlineAnalytics } from "react-icons/md";
+import { FaRegPaperPlane } from "react-icons/fa6";
+import { AiOutlineLike } from "react-icons/ai";
+import { MdManageAccounts } from "react-icons/md";
+
+import { MdGroup } from "react-icons/md";
+import { PiMedal } from "react-icons/pi";
+import { AiOutlineShop } from "react-icons/ai";
+
 export const offerCards = [
   {
     img: card,
@@ -149,27 +159,130 @@ export const reviews = [
   {
     desc: "A survey over a whoe subject or division of it, or especially anarticle making a critical reconsideration and summary of something written a survey over a whole subject or division of it, orespecially an article making a critical reconsideration and summary of something written.",
     name: "Anil Rajpoot",
-    location: "Delhi IND"
+    location: "Delhi IND",
   },
   {
     desc: "A survey over a whoe subject or division of it, or especially anarticle making a critical reconsideration and summary of something written a survey over a whole subject or division of it, orespecially an article making a critical reconsideration and summary of something written.",
     name: "Anil Rajpoot",
-    location: "Delhi IND"
-  },  {
+    location: "Delhi IND",
+  },
+  {
     desc: "A survey over a whoe subject or division of it, or especially anarticle making a critical reconsideration and summary of something written a survey over a whole subject or division of it, orespecially an article making a critical reconsideration and summary of something written.",
     name: "Anil Rajpoot",
-    location: "Delhi IND"
-  },  {
+    location: "Delhi IND",
+  },
+  {
     desc: "A survey over a whoe subject or division of it, or especially anarticle making a critical reconsideration and summary of something written a survey over a whole subject or division of it, orespecially an article making a critical reconsideration and summary of something written.",
     name: "Anil Rajpoot",
-    location: "Delhi IND"
-  },  {
+    location: "Delhi IND",
+  },
+  {
     desc: "A survey over a whoe subject or division of it, or especially anarticle making a critical reconsideration and summary of something written a survey over a whole subject or division of it, orespecially an article making a critical reconsideration and summary of something written.",
     name: "Anil Rajpoot",
-    location: "Delhi IND"
-  },  {
+    location: "Delhi IND",
+  },
+  {
     desc: "A survey over a whoe subject or division of it, or especially anarticle making a critical reconsideration and summary of something written a survey over a whole subject or division of it, orespecially an article making a critical reconsideration and summary of something written.",
     name: "Anil Rajpoot",
-    location: "Delhi IND"
+    location: "Delhi IND",
+  },
+];
+
+export const services = [
+  {
+    icon: LuNotebookPen,
+    title: "Feasibility Studies",
+    desc: "Assessing project viability, budget alignment, and timelines.",
+  },
+
+  {
+    icon: MdOutlineAnalytics,
+    title: "Site Analysis",
+    desc: "Evaluating topography, environmental factors, and regulatory requirements.",
+  },
+
+  {
+    icon: FaRegPaperPlane,
+    title: "Budget & Resource Planning",
+    desc: "Transparent cost estimation and resource optimization.",
+  },
+
+  {
+    icon: AiOutlineLike,
+    title: "Regulatory Approvals",
+    desc: "Streamlining permits, zoning compliance, and legal documentation.",
+  },
+
+  {
+    icon: MdManageAccounts,
+    title: "Risk Management",
+    desc: "Proactive strategies to mitigate delays and unforeseen challenges.",
+  },
+];
+
+export const services2 = [
+  {
+    title: "Residential",
+    desc: [
+      "Custom home designs tailored to lifestyle needs.",
+      "Renovations, extensions, and luxury villas.",
+      "Sustainable materials and energy-efficient solutions.",
+    ],
+  },
+  {
+    title: "Engineering",
+    desc: [
+      "Infrastructure development (roads, bridges, utilities).",
+      "Industrial facilities and warehouses.",
+      "Structural integrity audits and retrofitting.",
+    ],
+  },
+  {
+    title: "Commercial",
+    desc: [
+      "Office spaces, retail complexes, and hospitality hubs.",
+      "Smart building technology integration.",
+      "Turnkey solutions for fast-tracked project delivery.",
+    ],
+  },
+];
+
+export const service3 = [
+  {
+    icon: MdGroup,
+    title: "Coordination",
+    desc: "Seamless collaboration between architects, contractors, and vendors.",
+  },
+
+  {
+    icon: PiMedal,
+    title: "Quality Control",
+    desc: "Rigorous inspections at every phase",
+  },
+
+  {
+    icon: AiOutlineShop,
+    title: "Timely Delivery",
+    desc: "Adaptive strategies to keep projects on track.",
+  },
+];
+
+export const service4 = [
+  {
+    title: "Decades of Legacy",
+    desc: "Trust built through generations of delivering excellence.",
+  },
+
+  {
+    title: "End-to-End Solutions",
+    desc: "From concept to completion, we handle it all.",
+  },
+  {
+    title: "Innovation Meets Tradition",
+    desc: "Cutting-edge technology paired with artisanal craftsmanship.",
+  },
+  {
+    title: "Client-Centric Approach",
+    desc: "Transparent communication, flexibility, and personalized attention.",
   },
 ];

@@ -85,6 +85,8 @@
       background: #1a58b47c;
       width: fit-content;
       border-radius: 10px;
+      margin: 20px auto auto;
+      padding: 20px 10px;
 
       @include lg {
         flex-direction: column;
@@ -95,8 +97,7 @@
         width: 95%;
       }
 
-      margin: 20px auto auto;
-      padding: 20px 10px;
+     
       input {
         padding: 15px;
         font-size: 16px;
