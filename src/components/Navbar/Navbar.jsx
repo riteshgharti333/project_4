@@ -1,7 +1,6 @@
 import { Link } from "react-router-dom";
 import "./Navbar.scss";
 
-import { IoMdArrowDropdown } from "react-icons/io";
 import { useEffect, useRef, useState } from "react";
 
 import logo from "../../assets/images/logo.png";
