@@ -10,6 +10,7 @@
       font-weight: 500;
       position: relative;
       display: inline-block;
+      color: $secondary-color;
 
       @include sm {
         font-size: 25px;
@@ -18,7 +19,7 @@
       &::after {
         content: "";
         position: absolute;
-        background: #3bad4b;
+        background: $primary-color;
         height: 6px;
         border-radius: 5px;
         width: 200px;
@@ -54,7 +55,7 @@
         cursor: pointer;
 
         &.active {
-          background: #3bad4b;
+          background: #87CADD;
           color: #fff;
         }
       }
@@ -75,7 +76,7 @@
         display: flex;
         justify-content: center;
         button {
-          background: #61B54E;
+          background: $primary-color;
           border: none;
           padding: 10px 15px;
           font-size: 16px;

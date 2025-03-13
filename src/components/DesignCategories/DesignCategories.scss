@@ -9,6 +9,7 @@
     font-weight: 500;
     position: relative;
     display: inline-block;
+    color: $secondary-color;
 
     @include sm{
       font-size: 25px;
@@ -17,7 +18,7 @@
     &::after {
       content: "";
       position: absolute;
-      background: #3bad4b;
+      background: $primary-color;
       height: 6px;
       border-radius: 5px;
       width: 200px;

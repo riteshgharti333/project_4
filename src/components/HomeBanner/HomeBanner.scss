@@ -42,7 +42,7 @@
         @include md {
           display: grid;
           grid-template-columns: repeat(3, 1fr);
-        gap: 0px;
+          gap: 0px;
         }
         .homeBanner-desc-item-card {
           padding: 20px;
@@ -54,7 +54,7 @@
           cursor: pointer;
 
           &.active {
-            background: #3bad4b;
+            background: $secondary-color;
             color: #fff;
             box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
           }
@@ -69,7 +69,7 @@
           p {
             font-weight: bold;
 
-            @include sm{
+            @include sm {
               font-size: 14px;
               text-align: center;
             }
@@ -93,11 +93,10 @@
         width: 80%;
       }
 
-      @include md{
+      @include md {
         width: 95%;
       }
 
-     
       input {
         padding: 15px;
         font-size: 16px;
@@ -135,7 +134,7 @@
       }
 
       button {
-        background: #3bad4b;
+        background: $primary-color;
         border: none;
         white-space: nowrap;
         padding: 5px 10px;
@@ -143,10 +142,14 @@
         font-size: 14px;
         color: #fff;
         cursor: pointer;
-        border: 1px solid #3bad4b;
+        transition: all .3s ease;
+        border: 1px solid transparent;
 
         &:hover {
-          border: 1px solid #ffa500;
+          border: 1px solid #ff4500;
+          background: #fff;
+          color: #000;
+
         }
       }
     }

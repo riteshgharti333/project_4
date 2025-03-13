@@ -1,3 +1,5 @@
+@use "../../styles/responsive.scss" as *;
+
 .servicePage {
   display: flex;
   flex-direction: column;
@@ -19,6 +21,8 @@
       transform: translate(-50%, -50%);
       font-size: 70px;
       color: #fff;
+      width: 100%;
+      text-align: center;
     }
   }
 
@@ -31,10 +35,17 @@
       align-items: center;
       gap: 40px;
       margin: 0 auto;
-      padding: 40px 0px;
+      padding: 40px 10px;
+      @include md {
+        flex-direction: column;
+      }
       img {
         width: 400px;
         flex: 1;
+
+        @include md {
+          width: 100%;
+        }
       }
       .card1-desc {
         flex: 1;
@@ -42,6 +53,7 @@
         h1 {
           font-size: 30px;
           margin-bottom: 10px;
+          color: $primary-color;
         }
 
         p {
@@ -52,6 +64,7 @@
 
           span {
             font-weight: 400;
+            color: $secondary-color;
           }
         }
       }
@@ -64,17 +77,24 @@
     margin-bottom: 30px;
     display: flex;
     flex-direction: column;
-    gap: 50px;
+    gap: 80px;
     .service1-content {
       .service1-content-top {
         text-align: center;
 
+        h1 {
+          color: $secondary-color;
+        }
         p {
           margin: 0 auto;
           margin-top: 10px;
           margin-bottom: 40px;
           width: 60%;
           color: #585858;
+
+          @include md{
+            width: 95%;
+          }
         }
       }
 
@@ -84,16 +104,35 @@
         flex-wrap: wrap;
         justify-content: center;
         align-items: center;
+        padding: 0px 10px;
+
+       
+
+        @include sm {
+          display: grid;
+          grid-template-columns: repeat(1, 1fr);
+        }
 
         .service1-content-card {
           background: #87cadd27;
           max-width: 350px;
+          height: 200px;
           padding: 20px;
           display: flex;
           flex-direction: column;
           gap: 10px;
           box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
           border-radius: 10px;
+           
+          @include md{
+            width: 100%;
+            max-width: 90%;
+          }
+          @include sm {
+            width: 100%;
+            max-width: 90%;
+            margin: 0 auto;
+          }
 
           .service1-content-card-icon {
             position: relative;
@@ -109,7 +148,7 @@
               position: absolute;
               height: 40px;
               width: 40px;
-              background: #ff4500;
+              background: $primary-color;
               display: block;
               z-index: -1;
               border-radius: 50%;
@@ -119,6 +158,7 @@
           }
 
           h3 {
+            color: $secondary-color;
           }
           p {
             color: #585858;
@@ -130,16 +170,21 @@
     .service2-content {
       .service2-content-top {
         text-align: center;
-
+        h1 {
+          color: $secondary-color;
+        }
         p {
           margin: 0 auto;
-          margin-top: 10px;
+          margin-top: 20px;
           margin-bottom: 40px;
           width: 60%;
           color: #585858;
 
+          @include lg {
+            width: 90%;
+          }
           span {
-            color: #000;
+            color: $secondary-color;
           }
         }
       }
@@ -148,6 +193,17 @@
         display: flex;
         justify-content: center;
         gap: 40px;
+        flex-wrap: wrap;
+        
+        @include md{
+          padding: 0px 10px;
+        }
+
+
+        @include sm{
+          grid-template-columns: repeat(1,1fr);
+
+        }
         .service2-content-card {
           background: #87cadd27;
           max-width: 300px;
@@ -157,12 +213,22 @@
           border-radius: 10px;
           transition: all 0.3s ease-in-out;
           border: 1px solid #dddddd;
+          margin: 0 auto;
+
+          @include md{
+            width: 100%;
+            max-width: 95%;
+          }
 
           &:hover {
             box-shadow: rgba(255, 255, 255, 0.1) 0px 1px 1px 0px inset,
               rgba(50, 50, 93, 0.25) 0px 50px 100px -20px,
               rgba(0, 0, 0, 0.3) 0px 30px 60px -30px;
             transform: scale(1.03);
+          }
+
+          h2 {
+            color: $secondary-color;
           }
 
           ul {
@@ -174,7 +240,7 @@
               align-items: center;
 
               .dot-icon {
-                color: #ff4500;
+                color: $primary-color;
                 margin-right: 10px;
                 flex-shrink: 0;
                 font-size: 12px;
@@ -188,7 +254,9 @@
     .service3-content {
       .service3-content-top {
         text-align: center;
-
+        h1 {
+          color: $secondary-color;
+        }
         p {
           margin: 0 auto;
           margin-top: 10px;
@@ -202,6 +270,7 @@
         display: flex;
         justify-content: center;
         gap: 30px;
+        flex-wrap: wrap;
         .service3-content-card {
           text-align: center;
           background: #87cadd27;
@@ -217,10 +286,11 @@
             display: flex;
             align-items: center;
             justify-content: center;
+            color: $secondary-color;
 
             .service3-icon {
               margin-right: 10px;
-              color: #ff4500;
+              color: $primary-color;
               font-size: 30px;
             }
           }
@@ -236,26 +306,39 @@
       .service4-content-top {
         text-align: center;
         margin-bottom: 40px;
+
+        h1 {
+          color: $secondary-color;
+        }
       }
       .service4-content-cards {
-        //  display: grid;
-        //  grid-template-columns: repeat(2,1fr);
-        //  align-items: center;
-        //  justify-content: center;
+      
         display: flex;
         flex-wrap: wrap;
         gap: 20px;
         row-gap: 30px;
+
+      
+
+        @include sm{
+         grid-template-columns: repeat(1,1fr);
+
+        }
         .service4-content-card {
           max-width: 350px;
           height: 150px;
           background: #87cadd27;
-          border: 1px solid #ff4500;
+          border: 1px solid $primary-color;
           padding: 20px;
           border-radius: 10px;
           text-align: center;
           margin: 0 auto;
           transition: all 0.3s ease-in-out;
+
+          @include md{
+            max-width: 95%;
+            width: 100%;
+          }
 
           &:hover {
             transform: translateY(-6px);
@@ -263,6 +346,7 @@
           h2 {
             font-size: 20px;
             white-space: nowrap;
+            color: $secondary-color;
           }
           p {
             margin-top: 40px;
@@ -280,20 +364,31 @@
       .service5-content-top {
         text-align: center;
 
+        h1 {
+          color: $secondary-color;
+          text-align: center;
+        }
+
         p {
           margin: 0 auto;
           margin-top: 10px;
           width: 80%;
           color: #585858;
+
+          @include sm{
+            width: 95%;
+          }
         }
       }
 
       h3 {
         font-size: 25px;
+        text-align: center;
+        color: $secondary-color;
       }
 
       button {
-        background: #ff4500;
+        background: $primary-color;
         border: none;
         padding: 15px 20px;
         color: #fff;
@@ -308,7 +403,7 @@
 
         &:hover {
           background: #fff;
-          border: 1px solid #ff4500;
+          border: 1px solid $primary-color;
           color: #000;
         }
       }

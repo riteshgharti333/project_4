@@ -1,3 +1,5 @@
+@use "../../styles/responsive.scss" as *;
+
 .about {
   display: flex;
   flex-direction: column;
@@ -19,22 +21,32 @@
       transform: translate(-50%, -50%);
       font-size: 70px;
       color: #fff;
+      width: 100%;
+      text-align: center;
     }
   }
 
   .about-content1 {
     background: #87cadd27;
     width: 100%;
+
     .about-content-card1 {
       display: flex;
       max-width: 1200px;
       align-items: center;
       gap: 40px;
       margin: 0 auto;
-      padding: 40px 0px;
+      padding: 40px 10px;
+      @include md {
+        flex-direction: column;
+      }
       img {
         width: 400px;
         flex: 1;
+
+        @include md {
+          width: 100%;
+        }
       }
       .card1-desc {
         flex: 1;
@@ -42,6 +54,7 @@
         h1 {
           font-size: 30px;
           margin-bottom: 10px;
+          color: $secondary-color;
         }
 
         p {
@@ -66,19 +79,26 @@
       max-width: 1200px;
       align-items: center;
       gap: 40px;
-      padding: 40px 0px;
+      padding: 40px 10px;
 
       margin: 0 auto;
-
+      @include md {
+        flex-direction: column;
+      }
       img {
         width: 400px;
         flex: 1;
+
+        @include md {
+          width: 100%;
+        }
       }
       .card2-desc {
         flex: 1;
         h1 {
           font-size: 35px;
           margin-bottom: 10px;
+          color: $secondary-color;
         }
 
         p {
@@ -100,10 +120,18 @@
       align-items: center;
       gap: 40px;
       margin: 0 auto;
-      padding: 40px 0px;
+      padding: 40px 10px;
+
+      @include md {
+        flex-direction: column;
+      }
       img {
         width: 400px;
         flex: 1;
+
+        @include md {
+          width: 100%;
+        }
       }
       .card3-desc {
         flex: 1;
@@ -113,6 +141,7 @@
         h1 {
           font-size: 35px;
           margin-bottom: 10px;
+          color: $secondary-color;
         }
 
         .card3-desc-item {
@@ -142,10 +171,14 @@
       text-align: center;
       font-size: 35px;
       margin-bottom: 30px;
+      color: $secondary-color;
     }
     .about-content4-cards {
       display: flex;
+      flex-wrap: wrap;
       gap: 20px;
+      justify-content: center;
+      padding: 0px 10px;
       .about-content4-card {
         background: #87cadd27;
         display: flex;
@@ -173,6 +206,7 @@
 
         h3 {
           font-size: 20px;
+          color: $secondary-color;
         }
 
         p {
@@ -184,35 +218,45 @@
     }
   }
 
-  .about-content5{
+  .about-content5 {
     text-align: center;
     background: #87cadd27;
-    .about-content5-desc{
+    .about-content5-desc {
       max-width: 1000px;
       margin: 0 auto;
       padding: 70px 0px;
-      p{
+      p {
         font-size: 22px;
         font-weight: 300;
         color: #222;
+        padding: 0px 10px;
 
-      
+        @include sm {
+          font-size: 18px;
+        }
       }
-  
-      h3{
+
+      h3 {
         margin-top: 40px;
         font-size: 25px;
-        color: #222;
         display: flex;
         align-items: center;
         justify-content: center;
+        color: $secondary-color;
 
-        img{
+        @include sm {
+          font-size: 16px;
+        }
+
+        img {
           width: 30px;
           margin: 0px 8px;
+
+          @include sm {
+            font-size: 25px;
+          }
         }
       }
     }
-   
   }
 }

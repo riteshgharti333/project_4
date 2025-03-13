@@ -59,7 +59,7 @@ const ServicePage = () => {
             <h1>REC Designing & Construction</h1>
             <p>
               Specializing in
-              <span>Residential, Engineering, and Commercial (REC) </span>
+              <span> Residential, Engineering, and Commercial (REC) </span>
               projects, we merge creativity with technical precision to deliver
               spaces that inspire.
             </p>

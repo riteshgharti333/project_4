@@ -21,6 +21,10 @@ const MobileMenu = () => {
           Home
         </Link>
 
+        <Link className="menu-item" to="/services" onClick={handleCloseMenu}>
+          Services
+        </Link>
+
         <Link className="menu-item" to="/about-us" onClick={handleCloseMenu}>
           About Us
         </Link>
@@ -30,7 +34,6 @@ const MobileMenu = () => {
         </Link>
 
 
-        <p className="menu-item">Services :</p>
 
        
       </Menu>
